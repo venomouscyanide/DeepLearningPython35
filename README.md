@@ -1,5 +1,8 @@
 ## Overview
 
+Forked to help me with following http://neuralnetworksanddeeplearning.com/
+There are no improvements made to the code. Rather just reformatting and type hinting to help me follow the code easier.
+
 ### neuralnetworksanddeeplearning.com integrated scripts for Python 3.5.2 and Theano with CUDA support
 
 These scrips are updated ones from the **neuralnetworksanddeeplearning.com** gitHub repository in order to work with Python 3.5.2
