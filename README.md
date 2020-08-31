@@ -1,6 +1,6 @@
 ## Overview
 
-Forked to help me with following http://neuralnetworksanddeeplearning.com/
+Forked to help me with follow http://neuralnetworksanddeeplearning.com/
 <br> There are no improvements made to the code. Rather, just reformatting and type hinting to help me follow the code easier.
 
 ### neuralnetworksanddeeplearning.com integrated scripts for Python 3.5.2 and Theano with CUDA support
