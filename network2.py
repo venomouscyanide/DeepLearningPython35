@@ -373,3 +373,21 @@ if __name__ == '__main__':
     net.large_weight_initializer()
     net.SGD(list(training_data)[:1000], 400, 10, 0.5, evaluation_data=test_data,
             monitor_evaluation_accuracy=True, monitor_training_cost=True)
+
+    # applying regularization
+    training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
+    net = Network([784, 30, 10], cost=CrossEntropyCost)
+    net.large_weight_initializer()
+    net.SGD(list(training_data[:1000]), 400, 10, 0.5, evaluation_data=test_data, lmbda=0.1,
+            monitor_evaluation_cost=True, monitor_evaluation_accuracy=True,
+            monitor_training_cost=True, monitor_training_accuracy=True)
+
+    # full set, revised weight factor
+    net = Network([784, 30, 10], cost=CrossEntropyCost)
+    net.SGD(training_data, 30, 10, 0.5, evaluation_data=test_data, lmbda=5.0, monitor_evaluation_accuracy=True,
+            monitor_training_accuracy=True)
+
+    # without weight initialization
+    net = Network([784, 30, 10], cost=CrossEntropyCost)
+    net.SGD(training_data, 30, 10, 0.1, lmbda=5.0,
+            evaluation_data=validation_data, monitor_evaluation_accuracy=True)
